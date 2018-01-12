@@ -6,7 +6,7 @@
 	{% for post in sorted %}
 			
 		<article class="post__excerpt">
-			<a href="{{ post.url }}">
+			<a href="{{ post.url || prepend: site.baseurl }}">
 		
 				{% if post.img %}
 				<figure>
