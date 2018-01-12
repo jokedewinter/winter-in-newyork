@@ -1,0 +1,26 @@
+
+<nav class="post__nav">
+	
+	{% if page.previous.url %}
+		<article class="nav__excerpt previous">
+			<a href="{{page.previous.url}}">
+				<time>{{ page.previous.date | date_to_string }}</time>
+				<h3>{{ page.previous.title }}</h3>
+				{{ page.previous.excerpt }}
+				<p class="style-as-link">Continue reading</p>
+			</a>
+		</article>
+	{% endif %}
+
+	{% if page.next.url %}
+		<article class="nav__excerpt next">
+			<a href="{{page.next.url}}">
+				<time>{{ page.next.date | date_to_string }}</time>
+				<h3>{{ page.next.title }}</h3>
+				{{ page.next.excerpt }}
+				<p class="style-as-link">Continue reading</p>
+			</a>
+		</article>
+	{% endif %}
+
+</nav><!-- .post__nav -->

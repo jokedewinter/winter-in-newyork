@@ -1,0 +1,54 @@
+/**
+ * -------------------------------------------------------------------------------------------------
+ * .post__nav
+ * -------------------------------------------------------------------------------------------------
+ */
+ 
+ 
+.post__nav {
+	width: 100%;
+	clear: both;
+	display: grid;
+}
+
+/* Faux columns */
+.nav__excerpt {
+	padding: 3em 0;
+}
+
+.nav__excerpt:first-of-type {
+	background: lighten($col-border, 10%);
+}
+
+.nav__excerpt:last-of-type {
+	background: lighten($col-border, 15%);
+}
+
+.nav__excerpt a {
+	border-bottom: none;
+	display: block;
+	width: 80%;
+	max-width: 28em;
+	margin: 0 auto;
+}
+
+@media screen and ( min-width: 700px ) {
+
+	.post__nav {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.nav__excerpt a {
+		
+	}
+	
+	.previous { 
+		grid-column: 1;
+		text-align: right;
+	}
+	
+	.next {
+		grid-column: 2;
+	}
+
+}

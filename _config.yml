@@ -1,0 +1,42 @@
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# Accesse via {{ site.title }}, {{ site.email }}, etc.
+title: Winter in New York
+email: joke@jokedewinter.co.uk
+description: >- # this means to ignore newlines until "baseurl:"
+  A four month winter adventure in New York to study graphic design.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jokedewinter
+github_username:  jokedewinter
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Pretty permalinks for posts
+collections:
+posts:
+output: true
+permalink: /blog/:title/
+
+# Sass compiling
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Exclude from processing.
+exclude:
+- Gemfile
+- Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+- vendor
+- .sass-cache

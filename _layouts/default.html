@@ -1,0 +1,32 @@
+
+{% include header.html %}
+
+<div class="posts">
+	{% assign sorted = site.posts %}
+	{% for post in sorted %}
+			
+		<article class="post__excerpt">
+			<a href="{{ post.url }}">
+		
+				{% if post.img %}
+				<figure>
+					<img src="{{ "/images/" | prepend: site.baseurl }}{{ post.img }}" alt="{{ post.alt }}	">
+				</figure>
+				{% endif %}
+				
+				
+				<div class="post--time">
+					<time>{{ post.date | date_to_string }}</time>
+				</div>
+				
+				<h2 class="post--title">{{ post.title }}</h2>
+				<!--{{ post.excerpt }}
+				<p>Continue reading</p>-->
+				
+			</a>
+		</article><!-- .post__excerpt -->
+	
+	{% endfor %}		
+</div><!-- .posts -->
+
+{% include footer.html %}

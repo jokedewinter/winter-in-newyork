@@ -1,0 +1,70 @@
+---
+---
+
+/*
+Site: Winter in New York
+Author: Joke De Winter
+Author URI: http://www.jokedewinter.co.uk
+Description: Minimalist designed blog built with Jekyll.
+Version: v1
+*/
+
+/**
+ * -------------------------------------------------------------
+ * Reset
+ * CSS Reset for minimalists
+ * Source: http://allthingssmitty.com/2017/01/09/css-reset-for-minimalists/
+ * ------------------------------------------------------------------------ */
+
+* {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	-webkit-text-size-adjust: 100%; 
+
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, footer, header, main, nav, section { display: block; }
+
+@import "_utilities/colors";
+@import "_utilities/mixins";
+@import "_utilities/fonts";
+
+/**
+ * -------------------------------------------------------------
+ * Site settings
+ * ------------------------------------------------------------- */
+
+@import "_base/settings";
+
+/**
+ * -------------------------------------------------------------
+ * Components
+ * ------------------------------------------------------------- */
+
+@import "_components/typography";
+@import "_components/links";
+@import "_components/images";
+
+/**
+ * -------------------------------------------------------------
+ * Layout
+ * ------------------------------------------------------------- */
+
+@import "_layout/_site";
+@import "_layout/_header";
+@import "_layout/_posts";
+@import "_layout/_post";
+@import "_layout/_post-nav";
+@import "_layout/_about";
+
+/**
+ * -------------------------------------------------------------------------------------------------
+ * 4.0 - Miscellaneous Styles
+ * -------------------------------------------------------------------------------------------------
+ */
+
+@import "_ie";
+@import "_print";

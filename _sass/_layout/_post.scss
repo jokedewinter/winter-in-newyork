@@ -1,0 +1,45 @@
+/**
+ * -------------------------------------------------------------------------------------------------
+ * .post__content
+ * -------------------------------------------------------------------------------------------------
+ */
+
+.post--title {
+	@include font-body();
+	@include font-size(32);
+	margin-bottom: 1em;
+	
+	.post__excerpt & { text-align: center; }
+}
+
+.post > :not(figure) {
+	max-width: 35em;
+}
+
+.post figure {
+	margin-bottom: 2em;
+	max-height: 75vh;
+	overflow: hidden;
+}
+
+
+/**
+ * -------------------------------------------------------------------------------------------------
+ * .archive__list
+ * -------------------------------------------------------------------------------------------------
+ */
+
+.archive__list {
+	@include no-bullets();
+	margin-top: 2em;
+
+	li {
+		margin: 0.5em 0;
+
+		time:before {
+			content: "\2014";
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+	}
+}

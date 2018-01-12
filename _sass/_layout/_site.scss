@@ -1,0 +1,65 @@
+/**
+ * -------------------------------------------------------------------------------------------------
+ * Wrapper styles for sections
+ * -------------------------------------------------------------------------------------------------
+ */
+
+.site__content {
+	clear: both;
+	margin: 0;
+	display: block;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.site__header,
+.site__footer {
+	margin: 1em auto;
+}
+
+.site__header {
+	position: relative;
+	border-bottom: 1px solid $col-border;
+}
+
+.site__header,
+.site__footer,
+.posts,
+.post,
+.archive {
+	clear: both;
+	width: 85%;
+	max-width: 64em;
+	padding: 1em 0;
+}
+
+
+.posts,
+.post,
+.post__nav,
+.archive {
+	margin: 2em auto;
+}
+
+
+@media screen and ( min-width: 600px ) {
+
+	.site__header,
+	.site__footer {
+		margin: 2em auto;
+	}
+
+	.site__header,
+	.site__footer,
+	.posts,
+	.post,
+	.archive {
+		width: 90%;
+		max-width: 64em;
+	}
+}
+
