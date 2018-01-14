@@ -15,9 +15,7 @@ a {
 		color: lighten($col-text, 25%);
 	}
 
-	&:hover,
-	&:active { outline: 0; }
-
+	&:hover { outline: 0; }
 	.post__excerpt & { border-bottom: none; }
 }
 

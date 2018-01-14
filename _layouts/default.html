@@ -6,11 +6,11 @@
 	{% for post in sorted %}
 			
 		<article class="post__excerpt">
-			<a href="{{ post.url || prepend: site.baseurl }}">
+			<a href="{{ site.baseurl }}{{ post.url }}">
 		
 				{% if post.img %}
 				<figure>
-					<img src="{{ "/images/" | prepend: site.baseurl }}{{ post.img }}" alt="{{ post.alt }}	">
+					<img src="{{ site.baseurl }}/images/{{ post.img }}" alt="{{ post.alt }}	">
 				</figure>
 				{% endif %}
 				

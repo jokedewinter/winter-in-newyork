@@ -9,17 +9,16 @@
 	@include font-size(32);
 	margin-bottom: 1em;
 	
-	.post__excerpt & { text-align: center; }
+	.post__excerpt & { 
+		@include font-size(24);
+		margin-left: 0.5em; 
+	}
 }
 
-.post > :not(figure) {
-	max-width: 35em;
-}
-
-.post figure {
-	margin-bottom: 2em;
-	max-height: 75vh;
-	overflow: hidden;
+.post {
+	> :not(figure) { max-width: 35em; }
+	figure { margin-bottom: 2em; }
+	img { max-height: 75vh; }
 }
 
 

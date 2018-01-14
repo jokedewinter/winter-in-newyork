@@ -5,8 +5,15 @@
  */
  
 .posts {
+	/* 600px */
+	@media screen and ( min-width: 37.50em ) {
+		display: grid;
+		//grid-template-columns: repeat(3, 1fr);
+		//grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(33%, 300px));
+	}
 
-	/* 700px */
+	/* 700px *//*
 	@media screen and ( min-width: 43.75em ) { 
 		display: flex;
 		flex-direction: flex-row;
@@ -18,6 +25,7 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+	*/
 }
 
 
@@ -29,20 +37,48 @@
 
 .post__excerpt {
 
+	/* 600px */
+	@media screen and ( min-width: 37.50em ) {
+		margin: 0 0.5em 2em 0.5em;
+	}
+	
+	figure { 
+		margin-bottom: 0.5em; 
+		
+		/* Create a dynamic square box */
+		width: 100%;
+		padding-top: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	img {
+		/* 
+		Center the image inside the box, cropping if necessary 
+		(overflow: hidden in figure is part of this)
+		*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: auto;
+		max-width: none;
+		height: 100%;
+		@include transform(translate(-50%,-50%));
+	}
+	
 	/* hover effect */
 	a {
 		position: relative;
 		display: block;
 		padding-bottom: 1em;
 	}
-		
-	figure { margin-bottom: 0.5em; }
-		
+	
 	.post--time {
 		position: absolute;
+		top: 0;
+		right: 0;
 		bottom: 100%;
 		left: 0;
-		right: 0;
 		width: 100%;
 		height:0;
 		overflow: hidden;
@@ -50,12 +86,12 @@
 		opacity: 0.8;
 		@include transition (all, 0.5s, ease);
 	}
-		
+	
 	a:hover .post--time {
 		bottom: 0;
-		height: 100%;
+		padding-top: 100%;
 	}
-		
+				
 	time {
 		position: absolute;
 		top: 50%;
@@ -63,16 +99,6 @@
 		text-align: center;
 		color: $col-text-reverse;
 		@include transform (translate(-50%, -50%));
-	}
-
-	/* 700px */
-	@media screen and ( min-width: 43.75em ) {
-		margin: 0 0.5em 2em 0.5em;
-		max-width: 30%;
-		
-		@supports (display: grid) { max-width: none; }
-	}
-	
-	
+	}	
 }
 

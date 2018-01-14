@@ -5,7 +5,7 @@
 
 	{% if page.img %}
 	<figure>
-			<img src="{{ "/images/" | prepend: site.baseurl }}{{ page.img }}" alt="{{ page.alt }}	">
+			<img src="{{ site.baseurl }}/images/{{ page.img }}" alt="{{ page.alt }}	">
 	</figure>
 	{% endif %}
 

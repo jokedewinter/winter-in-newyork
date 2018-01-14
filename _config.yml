@@ -10,7 +10,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   A four month winter adventure in New York to study graphic design.
 
 baseurl: '/winter-in-newyork'
-#baseurl: ''
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jokedewinter
 github_username:  jokedewinter

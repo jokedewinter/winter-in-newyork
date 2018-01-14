@@ -5,7 +5,8 @@
  */
 
 .about {
-	background: lighten($col-border, 10%);
+	//background: lighten($col-border, 10%);
+	background: $col-brand-alt;
 }
 
 /*
@@ -21,7 +22,8 @@ It sits in its own media query so that it doesn't display when the page is print
 			width: 0;
 			height: 0;
 			border: transparent 15px solid;
-			border-bottom-color: lighten($col-border, 10%);
+			//border-bottom-color: lighten($col-border, 10%);
+			border-bottom-color: $col-brand-alt;
 			display: block;
 			position: absolute;
 			top: -30px;
@@ -39,19 +41,25 @@ It sits in its own media query so that it doesn't display when the page is print
 
 // The show animation
 .about {
-  display: block;
-  height: 0;
-  opacity: 0;
-
+	display: block;
+	height: 0;
+	opacity: 0;
+	color: $col-text-reverse;
+	
+	a {
+		border-color: $col-text-reverse;
+		color: $col-text-reverse;
+	}
+	
 	&:target {
-	  height: auto;
-	  opacity: 1;
+		height: auto;
+		opacity: 1;
 		margin: 1em 0 2em 0;
 		padding: 2em;
-	  @include transition(all, 0.3s, ease);
-
-		// The hide animation
+		@include transition(all, 0.3s, ease);
+				
 		/*
+		The hide animation
 		This sits here because you don't want to have the margin-bottom of the
 		.about__close thing messing up the design when it's not in view
 		*/
@@ -61,17 +69,17 @@ It sits in its own media query so that it doesn't display when the page is print
 			padding: 0.1em;
 			border-bottom: none;
 			color: $col-text-light;
-
+		
 			&:hover {
 				border-bottom: none;
 				color: $col-text;
 			}
-
+		
 			&:target {
-		  	display: block;
-		  	height: 0;
-		  	opacity: 0;
-		  	@include transition(all, 0.3s, linear);
+				display: block;
+			  	height: 0;
+			  	opacity: 0;
+			  	@include transition(all, 0.3s, linear);
 			}
 		}
 	}

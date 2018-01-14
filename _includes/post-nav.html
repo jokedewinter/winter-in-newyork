@@ -3,9 +3,9 @@
 	
 	{% if page.previous.url %}
 		<article class="nav__excerpt previous">
-			<a href="{{page.previous.url}}">
+			<a href="{{ site.baseurl }}{{ page.previous.url }}">
 				<time>{{ page.previous.date | date_to_string }}</time>
-				<h3>{{ page.previous.title }}</h3>
+				<h2 class="post--title">{{ page.previous.title }}</h2>
 				{{ page.previous.excerpt }}
 				<p class="style-as-link">Continue reading</p>
 			</a>
@@ -14,9 +14,9 @@
 
 	{% if page.next.url %}
 		<article class="nav__excerpt next">
-			<a href="{{page.next.url}}">
+			<a href="{{ site.baseurl }}{{ page.next.url }}">
 				<time>{{ page.next.date | date_to_string }}</time>
-				<h3>{{ page.next.title }}</h3>
+				<h2 class="post--title">{{ page.next.title }}</h2>
 				{{ page.next.excerpt }}
 				<p class="style-as-link">Continue reading</p>
 			</a>
