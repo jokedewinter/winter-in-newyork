@@ -45,6 +45,7 @@ It sits in its own media query so that it doesn't display when the page is print
 	height: 0;
 	opacity: 0;
 	color: $col-text-reverse;
+	@include transition(all, 0.7s, linear);
 	
 	a {
 		border-color: $col-text-reverse;
@@ -56,7 +57,7 @@ It sits in its own media query so that it doesn't display when the page is print
 		opacity: 1;
 		margin: 1em 0 2em 0;
 		padding: 2em;
-		@include transition(all, 0.3s, ease);
+		@include transition(all, 0.7s, ease);
 				
 		/*
 		The hide animation
@@ -79,7 +80,6 @@ It sits in its own media query so that it doesn't display when the page is print
 				display: block;
 			  	height: 0;
 			  	opacity: 0;
-			  	@include transition(all, 0.3s, linear);
 			}
 		}
 	}

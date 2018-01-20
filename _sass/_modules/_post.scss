@@ -16,9 +16,24 @@
 }
 
 .post {
-	> :not(figure) { max-width: 35em; }
+	> :not(figure):not(.gallery) { max-width: 35em; }
 	figure { margin-bottom: 2em; }
 	img { max-height: 75vh; }
+}
+
+/**
+ * -------------------------------------------------------------------------------------------------
+ * .gallery
+ * -------------------------------------------------------------------------------------------------
+ */
+
+.gallery {
+	/* 600px */
+	@media screen and ( min-width: 37.50em ) {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(33%, 300px));
+		grid-gap: 1em;
+	}	
 }
 
 
